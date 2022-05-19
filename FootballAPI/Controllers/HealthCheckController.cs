@@ -18,8 +18,8 @@ namespace FootballAPI.Controllers
             HttpClient client = new HttpClient();
             try
             {
-                HttpResponseMessage responseAnimals = client.GetAsync("http://localhost:5000/api/animals").Result;
-                HttpResponseMessage responseAreals = client.GetAsync("http://localhost:5000/api/areals").Result;
+                HttpResponseMessage responseAnimals = client.GetAsync("http://localhost:5000/api/club").Result;
+                HttpResponseMessage responseAreals = client.GetAsync("http://localhost:5000/api/player").Result;
                 if (responseAnimals.IsSuccessStatusCode && responseAreals.IsSuccessStatusCode)
                 {
                     return Task.FromResult(
